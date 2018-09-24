@@ -84,29 +84,12 @@ def occChooser():
         index += 1
 
 @app.route("/")
-def hello_World():
-    print(__name__) #terminal output
-    return "<a href='/foo'> No hablo queso! </a>"
-
-@app.route("/foo")
-def cheez_it():
-    return "<a href='/boo'> Cheese is Supreme </a>"
-
-@app.route("/boo")
-def lactose():
-    return "<a href='/yoo'> Cheese & Crackers </a>"
-
-@app.route("/yoo")
-def cheesy():
-    return "<a href='/'> Chuck E Cheese </a>"
-
-@app.route("/occupations")
 def occupations():
     occDict, links = dictFile("occupations.csv")
     occChosen, index = occChooser()
     i = 0
     for key in occDict:
-        occDict[key] = [occDict[key],links[i]]
+        occDict[key] = [occDict[key],links[i]] # makes dictionary include links w/ the percentage
         i += 1
     return render_template('LivingTribunal_chenD-linR.html',random = occChosen, link = links[index], _dict = occDict)
 
