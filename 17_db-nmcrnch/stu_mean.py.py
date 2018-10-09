@@ -1,4 +1,4 @@
-#
+#Real Fact 720 -- Angela Tom & Dennis Chen
 #SoftDev1 pd 6
 #K17: Average
 #10/6/18
@@ -58,14 +58,29 @@ def average():
     for name in names:
         id = cur.fetchone()[0]
         names[name] = [float("{0:.2f}".format(sum(names[name]) / (float(len(names[name]))))),id]
-    #print(names)
+    print(names)
     return names
-        
+
+def createIDTable():
+    avgD = average() # dictionary of the averages
+    c.execute("CREATE TABLE peeps_avg (id INTEGER, average FLOAT)") # create the peeps_avg table
+    for values in avgD.values(): 
+        id = values[1] 
+        #print (id);
+        avg = values[0]
+        #print (avg)
+        params = (id, avg)
+        c.execute("INSERT INTO peeps_avg VALUES (?, ?)", params) # fill up the table with id and values
+
+def addRows(code, mark, id):
+    params = (code, mark, id)
+    c.execute("INSERT INTO courses VALUES (?,?,?)", params)
 #==================Calling functions for file names used, saving changes=====================
 
 
 makeTable("courses.csv")
 makeTable("peeps.csv")
-average()
+print(average())
+createIDTable()
 db.commit()       #save changes
 db.close()        #close database
