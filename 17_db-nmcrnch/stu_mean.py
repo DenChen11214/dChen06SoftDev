@@ -48,7 +48,7 @@ def average():
     #creates a dictionary where the keys are the student names and value is a empty list
     names = dict()
     for each in tabl:
-        names[each[0]] = []
+        names[str(each[0])] = []
     #print(names)
     #puts each student's grades into the empty list in the dictionary
     for name in tab:
