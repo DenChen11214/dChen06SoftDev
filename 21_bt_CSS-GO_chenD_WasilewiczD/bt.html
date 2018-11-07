@@ -1,36 +1,81 @@
-<!-- containers, navbar, grids, dropdowns, columns,text stuff, maybe lists -->
 <!DOCTYPE html>
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 </head>
 <body>
-  <nav class="navbar navbar-default">
+  <!-- navbar at the top with a brand named dogs and links -->
+  <nav class="navbar navbar-expand-sm bg-light navbar-light">
     <div class="container-fluid">
       <div class="navbar-header">
         <a class="navbar-brand" href="#">DOGS</a>
       </div>
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="bt.html">Home</a></li>
-        <li><a href="#">Poodle</a></li>
-        <li><a href="#">German Shepard</a></li>
-        <li><a href="#">Shiba</a></li>
-      </ul>
+      <!-- collapsable button that appears when the window strinks-->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class = "collapse navbar-collapse" id = "collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class = "nav-item"><a class = "nav-link" href="#">Beagle</a></li>
+          <li class = "nav-item"><a class = "nav-link" href="#">Bulldog</a></li>
+          <li class = "nav-item"><a class = "nav-link" href="#">Golden Retriever</a></li>
+        </ul>
+      </div>
     </div>
   </nav>
+  <!-- Circular image of dog -->
   <div class="container">
-    <h2>Dogs</h2>
-    <p>The .dropdown class is used to indicate a dropdown menu.</p>
+    <div class = "text-center">
+    <h1>Dogs</h1>
+      <img src="https://www.guidedogs.org/wp-content/uploads/2018/01/Mobile.jpg" class="rounded-circle" alt="Cinque Terre" width="304" height="236">
+    </div>
+  </div>
+  <!-- Dog lorem ipsum with text edits in the middle -->
+    <p><small>Doggo ipsum pats heckin heckin good boys and</small> girls most angery pupper I have ever seen <strong>tungg, smol borking doggo with a long snoot</strong> for pats very good spot pupperino.
+       Such treat <em>extremely cuuuuuute super chub many</em> pats floofs big ol pupper, lotsa <mark>pats heckin angery woofer many pats most angery pupper I have ever seen, </mark>waggy wags boofers doggorino heckin angery woofer.
+       Doing me a frighten <del>long water shoob long woofer most angery</del> pupper I have ever seen tungg, what a nice floof <u>bork mlem, ur givin me a spook </u>long water shoob length boy. H*ck dat tungg tho you are doing me a frighten floofs doge, borkdrive adorable doggo.
+    </p>
+    <!-- drop down menu-lists 3 breeds -->
     <div class = "dropdown">
       <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dog Breeds
         <span class="caret"></span></button>
         <ul class="dropdown-menu">
           <li><a href="#"> Poodle</a></li>
           <li><a href="#"> German Shepard</a></li>
-          <li><a href="#"> Shiba</a></li>
+          <li><a href="#"> Shiba Inu</a></li>
+        </ul>
+      </div>
+    </div>
+    <br>
+    <!--form that doesn't go anywhere, lets you type in things -->
+    <form action="">
+    <div class="form-group">
+      <label for="dog">Dog</label>
+      <input type="dog" class="form-control" id="doge" placeholder="Enter Dog Breed" name="dog">
+    </div>
+    </form>
+    <!-- grid system -->
+    <!-- small column for shih tzus-->
+    <div class = "row">
+      <div class = "col-sm-2 bg-success">
+        <h2>Shih Tzu</h2>
+        <ul>
+          <li> Small </li>
+          <li> Furry </li>
+          <li> Nice </li>
+        </ul>
+      </div>
+      <!-- large column for long dog name -->
+      <div class = "col-sm-10 bg-warning">
+        <h2>Cavalier King Charles Spaniel</h2>
+        <ul>
+          <li> Very long name </li>
+          <li> Playful </li>
+          <li> Droopy Ears </li>
         </ul>
       </div>
     </div>
