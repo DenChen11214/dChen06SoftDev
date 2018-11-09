@@ -20,7 +20,7 @@
             <div class = "text-center">
                <h1>Dogs</h1>
                <p><small>(This is a jumbotron, a flexible component that can extend the
-                 entire viewport to showcase key messages on your website)</small>
+                 entire viewport to showcase key messages on your website and call extra attention to them) Set with container fluid to extend to width of screen</small>
             </div>
          </div>
       </div>
@@ -28,7 +28,10 @@
       <!-- boostrap allows for easy creation of navbars and navpills-->
       <div class = "container">
       <h2> Navbars! </h2>
-      <p> [explanation] </p>
+      <p> Navbars are a cool feature in bootstrap.
+      They come built in with subcomponents that include -brand to indicate ownership, etc, -nav for navigation, and other features you can read more about <a href=https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox> here </a>
+      Also, clicking on a part of the navbar sends you the subject in question by setting their href to #__divID__</p>
+
       </div>
       <nav class="navbar navbar-expand-sm bg-light navbar-light">
          <div class="container-fluid">
@@ -37,12 +40,12 @@
             </div>
             <div class = "collapse navbar-collapse" id = "collapsibleNavbar">
                <ul class="navbar-nav">
-                  <li class = "nav-item"><a class = "nav-link" href="#">Media</a></li>
-                  <li class = "nav-item"><a class = "nav-link" href="#">Text</a></li>
-                  <li class = "nav-item"><a class = "nav-link" href="#">Buttons</a></li>
-                  <li class = "nav-item"><a class = "nav-link" href="#">Forms</a></li>
-                  <li class = "nav-item"><a class = "nav-link" href="#">Columns</a></li>
-                  <li class = "nav-item"><a class = "nav-link" href="#">Alerts</a></li>
+                  <li class = "nav-item"><a class = "nav-link" href="#medi">Media</a></li>
+                  <li class = "nav-item"><a class = "nav-link" href="#text">Text</a></li>
+                  <li class = "nav-item"><a class = "nav-link" href="#buttons">Buttons</a></li>
+                  <li class = "nav-item"><a class = "nav-link" href="#form">Forms</a></li>
+                  <li class = "nav-item"><a class = "nav-link" href="#columns">Columns</a></li>
+                  <li class = "nav-item"><a class = "nav-link" href="#alerts">Alerts</a></li>
                </ul>
             </div>
          </div>
@@ -53,7 +56,7 @@
          <div class = "text-center">
             <h1>Dogs(And Media Things)</h1>
           </div>
-          <div class="media">
+          <div class="media" id = "medi'">
               <img class="mr-3" src="https://www.guidedogs.org/wp-content/uploads/2018/01/Mobile.jpg" alt="Cinque Terre" width="304" height="236">
               <div class="media-body">
                   <h5 class="mt-0">Media heading</h5>
@@ -61,16 +64,21 @@
               </div>
           </div>
          <!-- Dog lorem ipsum with text edits in the middle -->
+         <div id = "text">
          <h2> Text! </h2>
          <p> There are many things you can do to text with bootstrap using certain
-           keywords. This next lorem ipsum paragraph has many of those features.(Write the feature next to edited text)</p>
-         <p><small>Doggo ipsum pats heckin heckin good boys and</small> girls most angery pupper I have ever seen <strong>tungg, smol borking doggo with a long snoot</strong> for pats very good spot pupperino.
-            Such treat <em>extremely cuuuuuute super chub many</em> pats floofs big ol pupper, lotsa <mark>pats heckin angery woofer many pats most angery pupper I have ever seen, </mark>waggy wags boofers doggorino heckin angery woofer.
-            Doing me a frighten <del>long water shoob long woofer most angery</del> pupper I have ever seen tungg, what a nice floof <u>bork mlem, ur givin me a spook </u>long water shoob length boy. H*ck dat tungg tho you are doing me a frighten floofs doge, borkdrive adorable doggo.
+           keywords. This next lorem ipsum paragraph has many of those features.</p>
+         <p><small>(Small)Doggo ipsum pats heckin heckin good boys and</small> girls most angery pupper I have ever seen <strong>(strong)tungg, smol borking doggo with a long snoot</strong> for pats very good spot pupperino.
+            Such treat <em>(em, i.e. italicized)extremely cuuuuuute super chub many</em> pats floofs big ol pupper, lotsa <mark>(mark, i.e. highlight)pats heckin angery woofer many pats most angery pupper I have ever seen, </mark>waggy wags boofers doggorino heckin angery woofer.
+            Doing me a frighten <del>(del, i.e. crossed out text)long water shoob long woofer most angery</del> pupper I have ever seen tungg, what a nice floof <u>(u, i.e. underline)bork mlem, ur givin me a spook </u>long water shoob length boy. H*ck dat tungg tho you are doing me a frighten floofs doge, borkdrive adorable doggo.
          </p>
+       </div>
          <!-- drop down menu-lists 3 breeds -->
          <br>
-         <h1> Buttons! <h1>
+         <div id = "buttons">
+         <h2> Buttons! </h2>
+         Different types of buttons with specific classes labelled. Buttons are easy to use and come in different forms.<br>
+         <br>
          <button type="button" class="btn btn-primary">primary</button>
          <button type="button" class="btn btn-secondary">secondary</button>
          <button type="button" class="btn btn-success">success</button>
@@ -79,14 +87,21 @@
          <button type="button" class="btn btn-info">info</button>
          <button type="button" class="btn btn-light">light</button>
          <button type="button" class="btn btn-dark">dark</button>
+       </div>
          <!--form that doesn't go anywhere (sticking to one page), lets you type in things -->
+         <br>
+         <h2>Forms!</h2>
+         <br>
+         An inactive form. Forms in bootstrap come with classes in order to provide variety but also uniformity across different types.
+         Labels are a required attribute of a form.
          <form action="">
-            <div class="form-group">
+            <div class="form-group" id = "form">
                <label for="dog">Dog</label>
                <input type="dog" class="form-control" id="doge" placeholder="Enter Dog Breed" name="dog">
             </div>
          </form>
       </div>
+      <br>
       <!-- grid system -->
       <!-- One of the cool parts of bootstrap is its use of the grid system and flexbox when defining how much space columns take up
          If column sizes arent specified, adjacent columns will take up equal space
@@ -95,9 +110,13 @@
          Breakpoints make widths responsive and set sizes (as with col-sm-2 below)-->
       <!-- equally wide columns -->
       <div class="container">
-         <h2>Each is a column of equal length, equal to 2 out of 12</h2>
+         <h2>Each of the columns here are of equal length, each of size 2</h2>
+         <medium>Bootstrap uses a system of grids of rows and columns when it comes to layout and display. Unless specified,
+           adjacent columns share equal amounts of width on the screen
+           The grid system makes use of <a href=https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox>flexbox</a></medium>
          <br>
-         <div class="row">
+         <br>
+         <div class="row" id = "columns">
             <div class="col">
                <h2>Bulldog</h2>
                <li> Compact </li>
@@ -129,7 +148,12 @@
                <li> Diverse </li>
             </div>
          </div>
+         <br>
+         <br>
          <!-- small column for shih tzus-->
+      <h2>Smaller column for shih tzu, larger column for spaniel</h2>
+      <br>
+      <br>
          <div class = "row">
             <div class = "col-sm-2 bg-success">
                <h2>Shih Tzu(Column of Size 2)</h2>
@@ -153,7 +177,7 @@
       <h2>Alerts!</h2>
       <p>Alerts are used to provide feedback messages for users. There
       are many different kinds of alerts. For example: </p>
-      <div class="alert alert-primary" role="alert">
+      <div class="alert alert-primary" role="alert" id = "alerts">
         primary alert
       </div>
       <div class="alert alert-secondary" role="alert">
@@ -176,6 +200,7 @@
       </div>
       <div class="alert alert-dark" role="alert">
         dark alert
+      </div>
       </div>
       <!-- Footer -->
       <footer class="page-footer bg-dark">
