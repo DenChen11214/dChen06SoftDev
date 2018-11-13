@@ -1,4 +1,4 @@
-#Team Name: Dennis Chen & Damien Wasilewicz
+#Team Name: Dennis Chen
 #SoftDev pd6
 #K24: A RESTful Journey Skyward
 #Date: 11/3/18
