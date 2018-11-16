@@ -15,6 +15,7 @@ app = Flask(__name__)
 @app.route("/")
 def rest():
     #opens the api url and reads it
+    #* doesn't work after the first day, have to update the key every day
     url = urllib.request.urlopen("https://na1.api.riotgames.com/lol/league/v3/challengerleagues/by-queue/RANKED_SOLO_5x5?api_key=RGAPI-7307a50e-9821-4724-b6ee-69fa4a4801ed")
     info = url.read()
     #print(info)
