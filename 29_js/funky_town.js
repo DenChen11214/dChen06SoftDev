@@ -4,13 +4,12 @@ K28 -- Sequential Progression
 2018-12-19*/
 
 var fibonacci = function(n) {
-  if (n <= 1) {
-    return n;
+  var sum = [0,1]
+  for (var i = 2; i <= n; i++) {
+    sum.push(sum[i-2] + sum[i-1]);
   }
-  else {
-    return fibonacci(n-1) + fibonacci(n-2);
-  }
-}
+  console.log(sum[sum.length - 1])
+};
 
 var gcd = function(a,b) {
   if (a > b) {
@@ -29,16 +28,14 @@ var gcd = function(a,b) {
       }
     }
   }
-}
+};
 var students = ['joe','bob','mary','addison','dennis','andrew','tyler','jessica','karen','vincent','allen']
 var randomStudent = function(){
   console.log(students[parseInt(Math.random() * students.length)]);
-}
+};
 f = document.getElementById('fibb')
 g = document.getElementById('gcd')
 r = document.getElementById('randomS')
+f.addEventListener('click',function(){fibonacci(5)})
 r.addEventListener('click',randomStudent)
-g.addEventListener('click',gcd(4,8))
-var displayFibb = function(){
-  console.log(fibonacci(5))
-}
+g.addEventListener('click',function(){gcd(4,8)})
