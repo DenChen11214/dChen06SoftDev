@@ -8,30 +8,28 @@ var fibonacci = function(n) {
   for (var i = 2; i <= n; i++) {
     sum.push(sum[i-2] + sum[i-1]);
   }
-  console.log(sum[sum.length - 1])
+  return sum[sum.length - 1]
 };
 
 var gcd = function(a,b) {
   if (a > b) {
     for (i = b; i > 0; i--) {
       if ((a%i==0) && (b%i==0)) {
-        console.log(i);
-        break
+        return i
       }
     }
   }
   else {
     for (i = a; i > 0; i--) {
       if ((a%i==0) && (b%i==0)) {
-        console.log(i);
-        break
+        return i
       }
     }
   }
 };
 var students = ['joe','bob','mary','addison','dennis','andrew','tyler','jessica','karen','vincent','allen']
 var randomStudent = function(){
-  console.log(students[parseInt(Math.random() * students.length)]);
+  return students[parseInt(Math.random() * students.length)]
 };
 f = document.getElementById('fibb')
 g = document.getElementById('gcd')
@@ -41,8 +39,9 @@ f.addEventListener('click',function(){
   document.getElementById("message").innerHTML = 'Fibonnacci of 13 is ' + fibonacci(13);
 });
 r.addEventListener('click',function(){
-  console.log(randomStudent());
-  document.getElementById("message").innerHTML = 'Random student is ' + randomStudent();
+  var ranStu = randomStudent();
+  console.log(ranStu);
+  document.getElementById("message").innerHTML = 'Random student is ' + ranStu;
 });
 g.addEventListener('click',function(){
   console.log(gcd(2019,3365));
