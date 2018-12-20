@@ -1,6 +1,6 @@
-/* Team SmallFish - Addison Huang and Dennis Chen
+/* Team BigFish - Jeffrey Wu and Dennis Chen
 SoftDev1 pd6
-K28 -- Sequential Progression
+K29 -- Sequential Progression II: Electric Boogaloo...
 2018-12-19*/
 
 var fibonacci = function(n) {
@@ -36,6 +36,15 @@ var randomStudent = function(){
 f = document.getElementById('fibb')
 g = document.getElementById('gcd')
 r = document.getElementById('randomS')
-f.addEventListener('click',function(){fibonacci(5)})
-r.addEventListener('click',randomStudent)
-g.addEventListener('click',function(){gcd(4,8)})
+f.addEventListener('click',function(){
+  console.log(fibonacci(13));
+  document.getElementById("message").innerHTML = 'Fibonnacci of 13 is ' + fibonacci(13);
+});
+r.addEventListener('click',function(){
+  console.log(randomStudent());
+  document.getElementById("message").innerHTML = 'Random student is ' + randomStudent();
+});
+g.addEventListener('click',function(){
+  console.log(gcd(2019,3365));
+  document.getElementById("message").innerHTML = 'The GCD of 2019 and 3365 is ' + gcd(2019,3365);
+});
