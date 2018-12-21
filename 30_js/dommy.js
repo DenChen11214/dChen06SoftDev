@@ -3,14 +3,6 @@ SoftDev1 pd6
 K30 -- Sequential Progression III: Season of the Witch
 2018-12-20*/
 
-var fibonacci = function(n) {
-  var sum = [0,1];
-  for (var i = 2; i <= n; i++) {
-    sum.push(sum[i-2] + sum[i-1]);
-  }
-  return sum[sum.length - 1];
-};
-
 // var changeHeading = function(e) {
 //     var h = document.getElementById("h")
 //     h.innerHTML =
@@ -32,7 +24,6 @@ var addItem = function(e) {
     item.innerHTML = 'WORD';
     list.appendChild(item);
 };
-
 var button = document.getElementById("b");
 button.addEventListener('click', addItem);
 
@@ -43,6 +34,7 @@ var fib = function(n) {
         return fib(n-1) + fib(n-2);
     }
 };
+
 var fibIndex = 1
 var addFib = function(e){
     var lis = document.getElementById('fiblist');
@@ -53,6 +45,13 @@ var addFib = function(e){
     console.log(e);
 };
 
+var fibonacci = function(n) {
+  var sum = [0,1];
+  for (var i = 2; i <= n; i++) {
+    sum.push(sum[i-2] + sum[i-1]);
+  }
+  return sum[sum.length - 1];
+};
 var addFib2 = function(e){
     var lis = document.getElementById('fiblist');
     var item = document.createElement('li');
