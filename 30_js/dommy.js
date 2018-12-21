@@ -20,6 +20,7 @@ var changeHeading = function(e) {
 var removeItem = function(e) {
     //console.log(e);
     this.remove();
+    changeHeading(this)
 };
 
 /*Adds event listeners for element in the list*/
